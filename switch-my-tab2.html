@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      var i = 4;
+      window.SwitchTabs = async function(forward) {
+        if (forward) {
+          i += 1;
+        } else {
+          i -= 1;
+          if (i < 0) i = 0;
+        }
+
+        console.log(i);
+        window.location.href = "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=com.android.chrome;i.BRING_TAB_TO_FRONT=" +
+                                Math.floor(i) + ";S.com.android.browser.application_id=com.android.chrome;end;";
+      }
+    </script>
+  </head>
+  <body>
+      <a href="#" onclick="SwitchTabs(false);return false;">Prev</a>
+      <a href="#" onclick="SwitchTabs(true);return false;">Next</a>
+  </body>
+</html>

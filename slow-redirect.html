@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      window.ClickedLink = async function () {
+        document.getElementById("text").innerHTML = "Signing in...";
+        window.setTimeout(function () {
+          console.log("Redirect");
+          document.getElementById("text").innerHTML = "Redirecting...";
+          window.location.replace(
+            "intent://www.youtube.com/watch?v=8lXdyD2Yzls#Intent;scheme=https;package=com.google.android.youtube;end"
+          );
+        }, 7000);
+      };
+    </script>
+  </head>
+  <body>
+    <input type="text" name="username" />
+    <input type="password" name="password" />
+    <button type="submit" value="Submit" onclick="ClickedLink();return false;"> Click me </button>
+    
+    <p />
+    <span id="text"></span>
+    <p />
+<!--     <a href="slow-redirect-2.html">example 2</a> -->
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      var index = 0;
+      window.addEventListener("beforeunload", event => {
+        window.setTimeout(function() {
+          console.log(index++);
+          if (index > 100) return;
+          document.getElementById("foo").innerHTML=index;
+          // if (index % 100 == 0) {
+          // window.location.replace("market://launch?id=com.google.android.calculator");
+          // }
+          location.reload();
+        }, 0);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Test beforeunload</h1>
+    <span id="foo"> </span>
+    
+    
+    <a href="market://launch?id=com.google.android.calculator">Can I click this?</a>
+  </body>
+</html>

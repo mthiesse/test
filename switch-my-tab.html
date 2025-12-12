@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      // function sleep(ms) {
+      //     return new Promise(resolve => setTimeout(resolve, ms));
+      // }
+      var i = 100;
+      window.SwitchTabs = async function() {
+        document.body.innerHTML = "Please wait...";
+        window.setInterval(function() {
+          if (i == -1) window.location.reload();
+          if (i < -1) return;
+          if (i >= 0) {
+            console.log("Redirect");
+            window.location.replace("intent:test#Intent;scheme=https;action=android.intent.action.VIEW;package=com.android.chrome;i.BRING_TAB_TO_FRONT=" +
+                                    Math.floor(i / 5) + ";S.com.android.browser.application_id=com.android.chrome;end;");
+          }
+          i--;
+        }, 10);
+      }
+    </script>
+  </head>
+  <body>
+      <a href="#" onclick="SwitchTabs();return false;">Click Me</a>
+  </body>
+</html>

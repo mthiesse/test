@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <script>
+    function submitForm() {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://get.geojs.io/v1/ip/country.json?ip=8.8.8.8", true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+          document.getElementById("zone").innerHTML = xhr.responseText;
+          window.setTimeout(function () {
+            window.location = "intent://www.youtube.com/watch?v=8lXdyD2Yzls#Intent;scheme=https;package=com.google.android.youtube;end";
+          }, 15200);
+        }
+      };
+      xhr.send();
+    }
+  </script>
+  <body>
+    <form name="ajax" method="POST" action="">
+      <input type="button" value="Submit" onclick="submitForm()" />
+    </form>
+
+    <div id="zone"></div>
+  </body>
+</html>

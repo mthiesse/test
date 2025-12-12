@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <a id="link" href="frame-instant-redirect.html" target="_blank">open calculator</a>
+    <script>
+      document.getElementById("link").onclick = function () {
+        window.setTimeout(function () {
+          window.location = "https://www.google.com";
+        }, 100);
+      };
+    </script>
+  </body>
+</html>

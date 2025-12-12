@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <a href="history-2.html">Click me.</a>
+    <script>
+      window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+          window.location="market://launch?id=com.google.android.calculator";
+        }
+      });
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      window.SwitchTabs = async function() {
+        document.getElementById('frame').src = "market://launch?id=com.google.android.calculator"; //  "http://localhost:8080/"
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#" onclick="SwitchTabs();return false;">Click Me</a>
+    <p />
+    <p />
+    <iframe sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+    src="window-open-to-app.html"
+    style="border: 0; width:100px; height:100px;"
+    id="frame"></iframe>
+  </body>
+</html>

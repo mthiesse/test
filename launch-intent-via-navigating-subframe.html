@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      window.onload = function() {
+        document.getElementById("foo").onclick = function() {
+          document.getElementById("bar").src = "market://launch?id=com.google.android.calculator";
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <a id="foo"> Click Me Please </a>
+    
+    <iframe id="bar" src="about:blank" style="border: 0; width:300px; height:500px;"></iframe>
+  </body>
+</html>

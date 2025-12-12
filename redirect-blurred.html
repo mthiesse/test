@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <u><a id="contact" onclick="navigate()">Contact Apple</a></u>
+    <script type="text/javascript">
+      function navigate() {
+        window.location.href = "about:newtab";
+        setTimeout(() => {
+          window.location.href = "tel://123";
+        }, "1000");
+      }
+    </script>
+  </body>
+</html>

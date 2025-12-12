@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      window.onbeforeunload = function() {
+        if (warning) {
+          return "You have made changes on this page that you have not yet confirmed. If you navigate away from this page you will lose your unsaved changes";
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Test beforeunload</h1>
+  </body>
+</html>
